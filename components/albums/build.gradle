@@ -1,0 +1,18 @@
+apply from: "../../java.gradle"
+
+dependencies {
+    implementation "org.springframework:spring-core:$springVersion"
+    implementation "org.springframework:spring-web:$springVersion"
+    implementation "org.springframework:spring-context:$springVersion"
+    implementation "org.springframework:spring-jdbc:$springVersion"
+    implementation "com.fasterxml.jackson.core:jackson-databind:2.8.4"
+    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.7.0"
+
+    implementation "org.hibernate:hibernate-core:$hibernateVersion"
+    implementation "org.slf4j:slf4j-api:$slf4jVersion"
+
+    implementation "org.apache.tika:tika-core:1.14"
+    implementation "com.amazonaws:aws-java-sdk:1.11.74"
+
+    testImplementation "junit:junit:$junitVersion"
+}

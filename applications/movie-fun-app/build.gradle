@@ -1,0 +1,33 @@
+apply from: "../../java.gradle"
+
+apply plugin: "war"
+apply plugin: "org.springframework.boot"
+apply plugin: "io.spring.dependency-management"
+
+group = "org.superbiz"
+version = "1.1.0-SNAPSHOT"
+
+description = "OpenEJB :: Web Examples :: Moviefun"
+
+dependencies {
+    implementation project(":components:movies")
+    implementation project(":components:albums")
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-tomcat'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.7.0'
+    implementation 'taglibs:standard:1.1.2'
+    implementation 'javax.servlet:jstl:1.2'
+
+    implementation 'mysql:mysql-connector-java:5.1.47'
+    implementation "com.amazonaws:aws-java-sdk:1.11.74"
+
+    implementation 'org.apache.tomee:javaee-api:8.0'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:8.5.34'
+    implementation 'org.apache.geronimo.components:geronimo-jaspi:2.0.0'
+    implementation 'org.apache.geronimo.specs:geronimo-osgi-locator:1.1'
+
+    testImplementation "junit:junit:$junitVersion"
+}
