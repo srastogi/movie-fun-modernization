@@ -38,9 +38,9 @@ public class FileStore implements BlobStore {
         }
 
         return Optional.of(new Blob(
-            name,
-            new FileInputStream(file),
-            tika.detect(file)
+                name,
+                new FileInputStream(file),
+                tika.detect(file)
         ));
     }
 }
